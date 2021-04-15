@@ -6,7 +6,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/mean", (req, res) => {
-	const nums = req.query.nums;
 	if (nums) {
 	}
 	res.send(req.query);
