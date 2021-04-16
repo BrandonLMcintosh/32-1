@@ -13,13 +13,16 @@ class Nums {
 		try {
 			const numsStringArray = req.query.nums.split(",");
 			if (!numStrings) {
-				throw new AppError('Error: query "nums" must be present');
+				throw new AppError('Error: query "nums" must be present', 400);
 			}
 
 			numsIntString = numsStringArray.map((numString) => {
 				numInt = parseInt(numString);
 				if (numInt) {
-					throw new AppError("Error: one or more of the numbers in nums cannot be parsed to an integer");
+					throw new AppError(
+						"Error: one or more of the numbers in nums cannot be parsed to an integer",
+						400
+					);
 				} else {
 					return numInt;
 				}
