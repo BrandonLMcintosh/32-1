@@ -1,5 +1,4 @@
 const express = require("express");
-const { create } = require("node:domain");
 const { Nums, parse, getArray } = require("./nums");
 
 const app = express();

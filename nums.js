@@ -22,7 +22,7 @@ class Nums {
 		});
 		const half = Math.floor(arr.length / 2);
 		if (arr.length % 2) return arr[half];
-		return Math.round(((arr[half - 1] + arr[half]) / 2.0) * 1e4);
+		return Number(Math.round((arr[half - 1] + arr[half]) / 2 + "e4") + "e-4");
 	}
 
 	calcMode(arr) {

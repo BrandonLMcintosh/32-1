@@ -19,7 +19,7 @@ describe("median function", () => {
 
 describe("mode function", () => {
 	test("should return mode for valid data", () => {
-		const arr = [1, 2, 6, 9, 3, 4, 6];
+		const arr = [1, 2, 6, 9, 334, 4, 6];
 		const set = new Nums(arr);
 		expect(set.mode).toEqual(6);
 	});
